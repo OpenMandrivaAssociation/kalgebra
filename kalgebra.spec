@@ -31,52 +31,6 @@ actually not necessary to know MathML to use KAlgebra.
 %doc COPYING COPYING.LIB COPYING.DOC
 %doc %_kde_docdir/HTML/en/kalgebra
 
-#---------------------------------------------
-
-%define analitza_major 4
-%define libanalitza %mklibname analitza %{analitza_major}
-
-%package -n %libanalitza
-Summary: Runtime library for kalgebra
-Group: System/Libraries
-
-%description -n %libanalitza
-Runtime library for kalgebra
-
-%files -n %libanalitza
-%_kde_libdir/libanalitza.so.%{analitza_major}*
-
-#---------------------------------------------
-
-%define analitzagui_major 4
-%define libanalitzagui %mklibname analitzagui %{analitzagui_major}
-
-%package -n %libanalitzagui
-Summary: Runtime library for Kalgebra
-Group: System/Libraries
-
-%description -n %libanalitzagui
-Runtime library for Kalgebra.
-
-%files -n %libanalitzagui
-%_kde_libdir/libanalitzagui.so.%{analitzagui_major}*
-
-#---------------------------------------------
-
-%package devel
-Summary: Devel stuff for %{name}
-Group: Development/KDE and Qt
-Requires: %libanalitza = %version
-Requires: %libanalitzagui = %version
-Conflicts: kdeedu4-devel < 4.6.90
-
-%description  devel
-Files needed to build applications based on %{name}.
-
-%files devel
-%_kde_libdir/libanalitza.so
-%_kde_libdir/libanalitzagui.so
-
 #----------------------------------------------------------------------
 
 %prep
