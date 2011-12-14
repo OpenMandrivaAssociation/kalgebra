@@ -9,6 +9,7 @@ Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%name-%version.tar.bz2
 BuildRequires: kdelibs4-devel >= 2:%version
 BuildRequires: libkdeedu-devel >= %version
 BuildRequires: libreadline-devel
+BuildRequires: analitza-devel
 
 %description
 KAlgebra is a mathematical calculator based content markup MathML
