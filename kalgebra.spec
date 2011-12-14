@@ -20,7 +20,6 @@ actually not necessary to know MathML to use KAlgebra.
 %files
 %_kde_bindir/kalgebra
 %_kde_bindir/kalgebramobile
-%_kde_bindir/calgebra
 %_kde_iconsdir/*/*/apps/kalgebra.*
 %_kde_datadir/applications/kde4/kalgebra.desktop
 %_kde_datadir/applications/kde4/kalgebramobile.desktop
