@@ -8,7 +8,7 @@ URL: http://userbase.kde.org/KAlgebra
 Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%name-%version.tar.xz
 BuildRequires: kdelibs4-devel >= 2:%version
 BuildRequires: libkdeedu-devel >= %version
-BuildRequires: libreadline-devel
+BuildRequires: readline-devel
 BuildRequires: analitza-devel
 
 %description
