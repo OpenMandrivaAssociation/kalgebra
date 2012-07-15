@@ -1,11 +1,11 @@
 Name: kalgebra
 Summary: MathML-based graph calculator
-Version: 4.8.4
+Version: 4.8.97
 Release: 1
 Group: Graphical desktop/KDE
 License: GPLv2 LGPLv2 GFDL
 URL: http://userbase.kde.org/KAlgebra
-Source: ftp://ftp.kde.org/pub/kde/stable/%version/src/%name-%version.tar.xz
+Source: ftp://ftp.kde.org/pub/kde/unstable/%version/src/%name-%version.tar.xz
 BuildRequires: kdelibs4-devel >= 2:%version
 BuildRequires: libkdeedu-devel >= %version
 BuildRequires: readline-devel
