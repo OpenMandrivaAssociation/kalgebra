@@ -25,9 +25,8 @@ actually not necessary to know MathML to use KAlgebra.
 %_kde_datadir/applications/kde4/kalgebramobile.desktop
 %_kde_libdir/kde4/plasma_applet_kalgebra.so
 %_kde_appsdir/katepart/syntax/kalgebra.xml
-%_kde_appsdir/kalgebra
+%_kde_appsdir/kalgebramobile
 %_kde_services/kalgebra*.desktop
-%_kde_servicetypes/kalgebra*.desktop
 %doc COPYING COPYING.LIB COPYING.DOC
 %doc %_kde_docdir/HTML/en/kalgebra
 
