@@ -1,6 +1,6 @@
 Name:		kalgebra
 Summary:	MathML-based graph calculator
-Version:	4.9.4
+Version:	4.10.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
@@ -26,9 +26,12 @@ actually not necessary to know MathML to use KAlgebra.
 %{_kde_applicationsdir}/kalgebra.desktop
 %{_kde_applicationsdir}/kalgebramobile.desktop
 %{_kde_libdir}/kde4/plasma_applet_kalgebra.so
+%{_kde_libdir}/kde4/imports/org/kde/analitza/
 %{_kde_appsdir}/katepart/syntax/kalgebra.xml
 %{_kde_appsdir}/kalgebramobile
+%{_kde_appsdir}/plasma/plasmoids/org.kde.graphsplasmoid
 %{_kde_services}/kalgebra*.desktop
+%{_kde_services}/graphsplasmoid.desktop
 
 #----------------------------------------------------------------------
 
@@ -43,6 +46,10 @@ actually not necessary to know MathML to use KAlgebra.
 %makeinstall_std -C build
 
 %changelog
+* Thu Feb 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.0-1
+- New version 4.10.0
+- Update files
+
 * Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.4-1
 - New version 4.9.4
 
