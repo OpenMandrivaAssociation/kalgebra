@@ -1,7 +1,11 @@
+%ifarch %{arm}
+%bcond_without opengl
+%endif
+
 Name:		kalgebra
 Summary:	MathML-based graph calculator
 Version:	4.10.2
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
 URL:		http://userbase.kde.org/KAlgebra
@@ -10,6 +14,9 @@ BuildRequires:	kdelibs4-devel
 BuildRequires:	libkdeedu-devel >= %{version}
 BuildRequires:	readline-devel
 BuildRequires:	analitza-devel
+# add SHOULD_BUILD_OPENGL option, to be able to disable support
+# on arm because plotter3d assumes qreal=double all over the place
+Patch1:		kalgebra-4.10.1-opengl_optional.patch
 
 %description
 KAlgebra is a mathematical calculator based content markup MathML
@@ -37,9 +44,14 @@ actually not necessary to know MathML to use KAlgebra.
 
 %prep
 %setup -q
+%patch1 -p1 -b .opengl_optional
 
 %build
-%cmake_kde4
+%cmake_kde4 \
+%if %{with opengl}
+-DSHOULD_BUILD_OPENGL:BOOL=OFF \
+%endif
+
 %make
 
 %install
