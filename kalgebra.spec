@@ -16,6 +16,10 @@ BuildRequires:	kdelibs4-devel
 BuildRequires:	libkdeedu-devel >= %{version}
 BuildRequires:	readline-devel
 BuildRequires:	analitza-devel
+%if %{with opengl}
+BuildRequires:	pkgconfig(gl)
+BuildRequires:	pkgconfig(glu)
+%else
 # add SHOULD_BUILD_OPENGL option, to be able to disable support
 # on arm because plotter3d assumes qreal=double all over the place
 Patch1:		kalgebra-4.10.1-opengl_optional.patch
@@ -65,6 +69,7 @@ actually not necessary to know MathML to use KAlgebra.
 * Wed Jun 05 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.4-1
 - New version 4.10.4
 - Fix conditions for OpenGL support
+- Update BuildRequires
 
 * Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.3-1
 - New version 4.10.3
