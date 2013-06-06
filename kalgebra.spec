@@ -1,14 +1,16 @@
 %ifarch %{arm}
+%bcond_with opengl
+%else
 %bcond_without opengl
 %endif
 
-Name:		kalgebra
 Summary:	MathML-based graph calculator
-Version:	4.10.3
+Name:		kalgebra
+Version:	4.10.4
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
-URL:		http://userbase.kde.org/KAlgebra
+Url:		http://userbase.kde.org/KAlgebra
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 BuildRequires:	libkdeedu-devel >= %{version}
@@ -49,6 +51,8 @@ actually not necessary to know MathML to use KAlgebra.
 %build
 %cmake_kde4 \
 %if %{with opengl}
+	-DSHOULD_BUILD_OPENGL:BOOL=ON
+%else
 	-DSHOULD_BUILD_OPENGL:BOOL=OFF
 %endif
 
@@ -58,6 +62,10 @@ actually not necessary to know MathML to use KAlgebra.
 %makeinstall_std -C build
 
 %changelog
+* Wed Jun 05 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.4-1
+- New version 4.10.4
+- Fix conditions for OpenGL support
+
 * Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.3-1
 - New version 4.10.3
 
