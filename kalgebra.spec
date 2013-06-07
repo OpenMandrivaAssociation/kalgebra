@@ -19,7 +19,7 @@ BuildRequires:	analitza-devel
 %if %{with opengl}
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
-%else
+%endif
 # add SHOULD_BUILD_OPENGL option, to be able to disable support
 # on arm because plotter3d assumes qreal=double all over the place
 Patch1:		kalgebra-4.10.1-opengl_optional.patch
