@@ -1,12 +1,8 @@
-%ifarch %{arm}
-%bcond_with opengl
-%else
 %bcond_without opengl
-%endif
 
 Summary:	MathML-based graph calculator
 Name:		kalgebra
-Version:	4.12.2
+Version:	4.12.3
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2 LGPLv2 GFDL
@@ -66,6 +62,10 @@ actually not necessary to know MathML to use KAlgebra.
 %makeinstall_std -C build
 
 %changelog
+* Tue Mar 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.3-1
+- New version 4.12.3
+- Enable OpenGL for arm too
+
 * Tue Feb 04 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.2-1
 - New version 4.12.2
 
