@@ -1,7 +1,7 @@
-diff -up kalgebra-4.10.1/CMakeLists.txt.opengl_optional kalgebra-4.10.1/CMakeLists.txt
---- kalgebra-4.10.1/CMakeLists.txt.opengl_optional	2013-03-01 00:40:03.799142005 -0600
-+++ kalgebra-4.10.1/CMakeLists.txt	2013-03-18 18:00:31.348408921 -0500
-@@ -11,8 +11,11 @@ find_library(QTMML_LIBRARY qtmmlwidget)
+diff -urN kalgebra-4.13.2/CMakeLists.txt kalgebra-4.13.2-patched/CMakeLists.txt
+--- kalgebra-4.13.2/CMakeLists.txt	2014-05-04 18:34:06.000000000 +1100
++++ kalgebra-4.13.2-patched/CMakeLists.txt	2014-06-14 01:44:22.267023361 +1100
+@@ -11,8 +11,11 @@
  include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES} ${LIBKDEEDU_INCLUDE_DIR}/qtmml ${ANALITZA_INCLUDE_DIR})
  
  macro_optional_find_package(OpenGL)
@@ -13,5 +13,5 @@ diff -up kalgebra-4.10.1/CMakeLists.txt.opengl_optional kalgebra-4.10.1/CMakeLis
 +endif(SHOULD_BUILD_OPENGL)
 +macro_log_feature(HAVE_OPENGL "OpenGL" "Support for 3D graphs in Kalgebra" "http://opengl.org" FALSE "" "")
  
- macro_log_feature(QTMML_LIBRARY "QtMathML Widget" "Supports displaying some formulas in a mathematic form" "http://doc.qt.nokia.com/solutions/4/qtmmlwidget/qtmmlwidget.html" FALSE "" "")
+ CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/config-kalgebra.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-kalgebra.h)
  
