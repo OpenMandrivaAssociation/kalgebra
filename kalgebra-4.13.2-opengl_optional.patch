@@ -1,0 +1,17 @@
+diff -urN kalgebra-4.13.2/CMakeLists.txt kalgebra-4.13.2-patched/CMakeLists.txt
+--- kalgebra-4.13.2/CMakeLists.txt	2014-05-04 18:34:06.000000000 +1100
++++ kalgebra-4.13.2-patched/CMakeLists.txt	2014-06-14 01:44:22.267023361 +1100
+@@ -11,8 +11,11 @@
+ include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES} ${LIBKDEEDU_INCLUDE_DIR}/qtmml ${ANALITZA_INCLUDE_DIR})
+ 
+ macro_optional_find_package(OpenGL)
+-macro_bool_to_01(OPENGL_FOUND HAVE_OPENGL)
+-macro_log_feature(OPENGL_FOUND "OpenGL" "Support for 3D graphs in KAlgebra" "http://mesa3d.sourceforge.net" FALSE "" "")
++option(SHOULD_BUILD_OPENGL "Build OpenGL support" ON)
++if(SHOULD_BUILD_OPENGL)
++  macro_bool_to_01(OPENGL_FOUND HAVE_OPENGL)
++endif(SHOULD_BUILD_OPENGL)
++macro_log_feature(HAVE_OPENGL "OpenGL" "Support for 3D graphs in Kalgebra" "http://opengl.org" FALSE "" "")
+ 
+ CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/config-kalgebra.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/src/config-kalgebra.h)
+ 
