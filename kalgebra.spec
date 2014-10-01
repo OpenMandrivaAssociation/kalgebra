@@ -31,14 +31,15 @@ actually not necessary to know MathML to use KAlgebra.
 %doc %{_kde_docdir}/HTML/en/kalgebra
 %{_kde_bindir}/kalgebra
 %{_kde_bindir}/kalgebramobile
-%{_kde_iconsdir}/*/*/apps/kalgebra.*
 %{_kde_applicationsdir}/kalgebra.desktop
 %{_kde_applicationsdir}/kalgebramobile.desktop
-%{_kde_libdir}/kde4/plasma_applet_kalgebra.so
-%{_kde_libdir}/kde4/imports/org/kde/analitza/
 %{_kde_appsdir}/katepart/syntax/kalgebra.xml
 %{_kde_appsdir}/kalgebramobile
 %{_kde_appsdir}/plasma/plasmoids/org.kde.graphsplasmoid
+%{_kde_datadir}/appdata/kalgebra.appdata.xml
+%{_kde_iconsdir}/*/*/apps/kalgebra.*
+%{_kde_libdir}/kde4/plasma_applet_kalgebra.so
+%{_kde_libdir}/kde4/imports/org/kde/analitza/
 %{_kde_services}/kalgebra*.desktop
 %{_kde_services}/graphsplasmoid.desktop
 
@@ -64,6 +65,7 @@ actually not necessary to know MathML to use KAlgebra.
 %changelog
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
+- Update files
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
