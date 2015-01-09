@@ -2,16 +2,21 @@
 
 Summary:	MathML-based graph calculator
 Name:		kalgebra
-Version:	4.14.3
-Release:	2
+Version:	14.12.0
+Release:	1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://userbase.kde.org/KAlgebra
 Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5I18n)
 BuildRequires:	kdelibs4-devel
 BuildRequires:	libkdeedu-devel >= %{version}
 BuildRequires:	readline-devel
 BuildRequires:	analitza-devel
+BuildRequires:	qt5-qtimageformats-devel
 %if %{with opengl}
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
@@ -29,32 +34,29 @@ actually not necessary to know MathML to use KAlgebra.
 %files
 %doc COPYING COPYING.LIB COPYING.DOC
 %doc %{_kde_docdir}/HTML/en/kalgebra
+%{_kde_bindir}/calgebra
 %{_kde_bindir}/kalgebra
 %{_kde_bindir}/kalgebramobile
-%{_kde_applicationsdir}/kalgebra.desktop
-%{_kde_applicationsdir}/kalgebramobile.desktop
-%{_kde_appsdir}/katepart/syntax/kalgebra.xml
-%{_kde_appsdir}/kalgebramobile
-%{_kde_appsdir}/plasma/plasmoids/org.kde.graphsplasmoid
+%{_datadir}/applications/kalgebra.desktop
+%{_datadir}/applications/kalgebramobile.desktop
+%{_datadir}/katepart/syntax/kalgebra.xml
+%{_datadir}/kalgebramobile
+%{_datadir}/kservices5/graphsplasmoid.desktop
+%{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid
 %{_kde_datadir}/appdata/kalgebra.appdata.xml
 %{_kde_iconsdir}/*/*/apps/kalgebra.*
-%{_kde_libdir}/kde4/plasma_applet_kalgebra.so
-%{_kde_libdir}/kde4/imports/org/kde/analitza/
-%{_kde_services}/kalgebra*.desktop
-%{_kde_services}/graphsplasmoid.desktop
 
 #----------------------------------------------------------------------
 
 %prep
 %setup -q
-%patch0 -p1 -b .opengl_optional
 
 %build
 %cmake_kde4 \
 %if %{with opengl}
-	-DSHOULD_BUILD_OPENGL:BOOL=ON
+	-DHAVE_OPENGL=1
 %else
-	-DSHOULD_BUILD_OPENGL:BOOL=OFF
+	-DHAVE_OPENGL=0
 %endif
 
 %make
