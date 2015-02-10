@@ -1,13 +1,15 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+
 %bcond_without opengl
 
 Summary:	MathML-based graph calculator
 Name:		kalgebra
-Version:	14.12.0
+Version:	14.12.2
 Release:	1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://userbase.kde.org/KAlgebra
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5ConfigWidgets)
