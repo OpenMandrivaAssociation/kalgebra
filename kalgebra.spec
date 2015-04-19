@@ -4,7 +4,7 @@
 
 Summary:	MathML-based graph calculator
 Name:		kalgebra
-Version:	14.12.2
+Version:	15.04.0
 Release:	1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
