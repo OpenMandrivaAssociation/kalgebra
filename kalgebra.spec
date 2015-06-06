@@ -39,7 +39,6 @@ actually not necessary to know MathML to use KAlgebra.
 %{_kde_bindir}/kalgebra
 %{_kde_bindir}/kalgebramobile
 %{_datadir}/applications/*.desktop
-%{_datadir}/applications/kalgebramobile.desktop
 %{_datadir}/katepart5/syntax/kalgebra.xml
 %{_datadir}/kalgebramobile
 %{_datadir}/kservices5/graphsplasmoid.desktop
