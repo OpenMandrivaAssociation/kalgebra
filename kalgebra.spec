@@ -9,12 +9,11 @@ Release:	1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://userbase.kde.org/KAlgebra
-Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5ConfigWidgets)
 BuildRequires:	cmake(KF5I18n)
-BuildRequires:	kdelibs4-devel
 BuildRequires:	libkdeedu-devel >= %{version}
 BuildRequires:	readline-devel
 BuildRequires:	analitza-devel
