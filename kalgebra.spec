@@ -23,6 +23,7 @@ BuildRequires:	cmake(Qt5Svg)
 BuildRequires:	cmake(Qt5OpenGL)
 BuildRequires:	cmake(Qt5PrintSupport)
 BuildRequires:	cmake(Qt5Test)
+BuildRequires:	cmake(Qt5WebkitWidgets)
 
 BuildRequires:	cmake(ECM)
 
