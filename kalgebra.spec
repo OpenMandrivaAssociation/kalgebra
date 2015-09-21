@@ -4,8 +4,8 @@
 
 Summary:	MathML-based graph calculator
 Name:		kalgebra
-Version:	15.04.3
-Release:	3
+Version:	15.08.1
+Release:	1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://userbase.kde.org/KAlgebra
@@ -14,6 +14,18 @@ BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5ConfigWidgets)
 BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5WidgetsAddons)
+
+BuildRequires:  cmake(Qt5Qml)
+BuildRequires:	cmake(Qt5Quick)
+BuildRequires:	cmake(Qt5Xml)
+BuildRequires:	cmake(Qt5Svg)
+BuildRequires:	cmake(Qt5OpenGL)
+BuildRequires:	cmake(Qt5PrintSupport)
+BuildRequires:	cmake(Qt5Test)
+
+BuildRequires:	cmake(ECM)
+
 BuildRequires:	libkdeedu-devel >= %{version}
 BuildRequires:	readline-devel
 BuildRequires:	analitza-devel
