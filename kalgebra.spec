@@ -56,7 +56,7 @@ actually not necessary to know MathML to use KAlgebra.
 %{_datadir}/kalgebramobile
 %{_datadir}/kservices5/graphsplasmoid.desktop
 %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid
-%{_kde_datadir}/appdata/kalgebra.appdata.xml
+%{_kde_datadir}/appdata/org.kde.kalgebra.appdata.xml
 %{_kde_iconsdir}/*/*/apps/kalgebra.*
 
 #----------------------------------------------------------------------
