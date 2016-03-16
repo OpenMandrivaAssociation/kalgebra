@@ -27,7 +27,7 @@ BuildRequires:	cmake(Qt5WebKitWidgets)
 
 BuildRequires:	cmake(ECM)
 
-BuildRequires:	libkdeedu-devel >= %{version}
+BuildRequires:	libkdeedu-devel >= 15.12
 BuildRequires:	readline-devel
 BuildRequires:	analitza-devel
 BuildRequires:	qt5-qtimageformats-devel
