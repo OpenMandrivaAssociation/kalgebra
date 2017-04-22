@@ -4,7 +4,7 @@
 
 Summary:	MathML-based graph calculator
 Name:		kalgebra
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
@@ -44,9 +44,8 @@ language. Nowadays it is capable to make simple MathML operations
 (arithmetic and logical) and representate 2D and 3D graphs. It is
 actually not necessary to know MathML to use KAlgebra.
 
-%files
+%files -f all.lang
 %doc COPYING COPYING.LIB COPYING.DOC
-%doc %{_kde_docdir}/HTML/en/kalgebra
 %{_kde_bindir}/calgebra
 %{_kde_bindir}/kalgebra
 %{_kde_bindir}/kalgebramobile
@@ -57,6 +56,16 @@ actually not necessary to know MathML to use KAlgebra.
 %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid
 %{_kde_datadir}/metainfo/org.kde.kalgebra.appdata.xml
 %{_kde_iconsdir}/*/*/apps/kalgebra.*
+%doc %{_kde_docdir}/HTML/en/kalgebra
+%lang(ca) %doc %{_kde_docdir}/HTML/ca/kalgebra
+%lang(de) %doc %{_kde_docdir}/HTML/de/kalgebra
+%lang(es) %doc %{_kde_docdir}/HTML/es/kalgebra
+%lang(et) %doc %{_kde_docdir}/HTML/et/kalgebra
+%lang(it) %doc %{_kde_docdir}/HTML/it/kalgebra
+%lang(nl) %doc %{_kde_docdir}/HTML/nl/kalgebra
+%lang(pt_BR) %doc %{_kde_docdir}/HTML/pt_BR/kalgebra
+%lang(sv) %doc %{_kde_docdir}/HTML/sv/kalgebra
+%lang(uk) %doc %{_kde_docdir}/HTML/uk/kalgebra
 
 #----------------------------------------------------------------------
 
@@ -75,4 +84,6 @@ actually not necessary to know MathML to use KAlgebra.
 
 %install
 %ninja_install -C build
-
+%find_lang kalgebra
+%find_lang plasma_applet_kalgebraplasmoid
+cat *.lang >all.lang
