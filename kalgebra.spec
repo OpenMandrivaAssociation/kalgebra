@@ -24,6 +24,7 @@ BuildRequires:	cmake(Qt5OpenGL)
 BuildRequires:	cmake(Qt5PrintSupport)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5WebKitWidgets)
+BuildRequires:	cmake(Qt5WebEngineWidgets)
 BuildRequires:	cmake(Analitza5)
 
 BuildRequires:	cmake(ECM)
