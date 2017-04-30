@@ -57,16 +57,16 @@ actually not necessary to know MathML to use KAlgebra.
 %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid
 %{_kde_datadir}/metainfo/org.kde.kalgebra.appdata.xml
 %{_kde_iconsdir}/*/*/apps/kalgebra.*
-%doc %{_kde_docdir}/HTML/en/kalgebra
-%lang(ca) %doc %{_kde_docdir}/HTML/ca/kalgebra
-%lang(de) %doc %{_kde_docdir}/HTML/de/kalgebra
-%lang(es) %doc %{_kde_docdir}/HTML/es/kalgebra
-%lang(et) %doc %{_kde_docdir}/HTML/et/kalgebra
-%lang(it) %doc %{_kde_docdir}/HTML/it/kalgebra
-%lang(nl) %doc %{_kde_docdir}/HTML/nl/kalgebra
-%lang(pt_BR) %doc %{_kde_docdir}/HTML/pt_BR/kalgebra
-%lang(sv) %doc %{_kde_docdir}/HTML/sv/kalgebra
-%lang(uk) %doc %{_kde_docdir}/HTML/uk/kalgebra
+%doc %{_docdir}/HTML/en/kalgebra
+%lang(ca) %doc %{_docdir}/HTML/ca/kalgebra
+%lang(de) %doc %{_docdir}/HTML/de/kalgebra
+%lang(es) %doc %{_docdir}/HTML/es/kalgebra
+%lang(et) %doc %{_docdir}/HTML/et/kalgebra
+%lang(it) %doc %{_docdir}/HTML/it/kalgebra
+%lang(nl) %doc %{_docdir}/HTML/nl/kalgebra
+%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kalgebra
+%lang(sv) %doc %{_docdir}/HTML/sv/kalgebra
+%lang(uk) %doc %{_docdir}/HTML/uk/kalgebra
 
 #----------------------------------------------------------------------
 
