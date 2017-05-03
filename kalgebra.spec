@@ -15,7 +15,6 @@ BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5ConfigWidgets)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5WidgetsAddons)
-
 BuildRequires:  cmake(Qt5Qml)
 BuildRequires:	cmake(Qt5Quick)
 BuildRequires:	cmake(Qt5Xml)
@@ -26,9 +25,7 @@ BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5WebKitWidgets)
 BuildRequires:	cmake(Qt5WebEngineWidgets)
 BuildRequires:	cmake(Analitza5)
-
 BuildRequires:	cmake(ECM)
-
 BuildRequires:	readline-devel
 BuildRequires:	qt5-qtimageformats-devel
 %if %{with opengl}
@@ -47,16 +44,16 @@ actually not necessary to know MathML to use KAlgebra.
 
 %files -f all.lang
 %doc COPYING COPYING.LIB COPYING.DOC
-%{_kde_bindir}/calgebra
-%{_kde_bindir}/kalgebra
-%{_kde_bindir}/kalgebramobile
+%{_bindir}/calgebra
+%{_bindir}/kalgebra
+%{_bindir}/kalgebramobile
 %{_datadir}/applications/*.desktop
 %{_datadir}/katepart5/syntax/kalgebra.xml
 %{_datadir}/kalgebramobile
 %{_datadir}/kservices5/graphsplasmoid.desktop
 %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid
-%{_kde_datadir}/metainfo/org.kde.kalgebra.appdata.xml
-%{_kde_iconsdir}/*/*/apps/kalgebra.*
+%{_datadir}/metainfo/org.kde.kalgebra.appdata.xml
+%{_iconsdir}/*/*/apps/kalgebra.*
 %doc %{_docdir}/HTML/en/kalgebra
 %lang(ca) %doc %{_docdir}/HTML/ca/kalgebra
 %lang(de) %doc %{_docdir}/HTML/de/kalgebra
