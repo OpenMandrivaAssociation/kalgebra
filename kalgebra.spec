@@ -4,7 +4,7 @@
 
 Summary:	MathML-based graph calculator
 Name:		kalgebra
-Version:	17.04.3
+Version:	17.07.90
 Release:	1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
@@ -54,16 +54,6 @@ actually not necessary to know MathML to use KAlgebra.
 %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid
 %{_datadir}/metainfo/org.kde.kalgebra.appdata.xml
 %{_iconsdir}/*/*/apps/kalgebra.*
-%doc %{_docdir}/HTML/en/kalgebra
-%lang(ca) %doc %{_docdir}/HTML/ca/kalgebra
-%lang(de) %doc %{_docdir}/HTML/de/kalgebra
-%lang(es) %doc %{_docdir}/HTML/es/kalgebra
-%lang(et) %doc %{_docdir}/HTML/et/kalgebra
-%lang(it) %doc %{_docdir}/HTML/it/kalgebra
-%lang(nl) %doc %{_docdir}/HTML/nl/kalgebra
-%lang(pt_BR) %doc %{_docdir}/HTML/pt_BR/kalgebra
-%lang(sv) %doc %{_docdir}/HTML/sv/kalgebra
-%lang(uk) %doc %{_docdir}/HTML/uk/kalgebra
 
 #----------------------------------------------------------------------
 
@@ -82,6 +72,4 @@ actually not necessary to know MathML to use KAlgebra.
 
 %install
 %ninja_install -C build
-%find_lang kalgebra
-%find_lang plasma_applet_kalgebraplasmoid
-cat *.lang >all.lang
+%find_lang all --all-name --with-html
