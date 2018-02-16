@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kalgebra-17.12.1.tar.xz: b86523489fa7b943bc15de3a91d56b80cebe9f57
+sources:
+  kalgebra-17.12.2.tar.xz: 690f9832b3b490ce78de9d6d0943ebefe41e75a6
