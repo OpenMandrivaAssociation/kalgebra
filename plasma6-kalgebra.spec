@@ -29,6 +29,7 @@ BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6WebEngineCore)
 BuildRequires:	cmake(Qt6WebEngineWidgets)
 BuildRequires:	cmake(Qt6OpenGLWidgets)
+BuildRequires:	cmake(Qt6Core5Compat)
 BuildRequires:	cmake(Analitza6)
 BuildRequires:	cmake(ECM)
 BuildRequires:	readline-devel
