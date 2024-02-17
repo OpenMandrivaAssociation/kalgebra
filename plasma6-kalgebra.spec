@@ -1,15 +1,22 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 %bcond_without opengl
 
 Summary:	MathML-based graph calculator
 Name:		plasma6-kalgebra
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
 Url:		http://userbase.kde.org/KAlgebra
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/education/kalgebra/-/archive/%{gitbranch}/kalgebra-%{gitbranchd}.tar.bz2#/kalgebra-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kalgebra-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(KF6DocTools)
 BuildRequires:	cmake(KF6KIO)
 BuildRequires:	cmake(KF6ConfigWidgets)
@@ -65,7 +72,7 @@ actually not necessary to know MathML to use KAlgebra.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kalgebra-%{version}
+%autosetup -p1 -n kalgebra-%{?git:%{gitbranchd}}%{!?git:%{version}}
 
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
