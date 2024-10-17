@@ -8,7 +8,7 @@ Version:	23.08.5
 Release:	1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
-Url:		http://userbase.kde.org/KAlgebra
+Url:		https://userbase.kde.org/KAlgebra
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5KIO)
