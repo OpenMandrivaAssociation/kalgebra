@@ -11,7 +11,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
-Url:		http://userbase.kde.org/KAlgebra
+Url:		https://userbase.kde.org/KAlgebra
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/education/kalgebra/-/archive/%{gitbranch}/kalgebra-%{gitbranchd}.tar.bz2#/kalgebra-%{git}.tar.bz2
 %else
