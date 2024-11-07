@@ -7,7 +7,7 @@
 
 Summary:	MathML-based graph calculator
 Name:		plasma6-kalgebra
-Version:	24.08.2
+Version:	24.08.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
