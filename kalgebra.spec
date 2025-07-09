@@ -6,7 +6,7 @@
 %bcond_without opengl
 
 Summary:	MathML-based graph calculator
-Name:		plasma6-kalgebra
+Name:		kalgebra
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ and LGPLv2+ and GFDL
