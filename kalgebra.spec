@@ -7,7 +7,7 @@
 
 Summary:	MathML-based graph calculator
 Name:		kalgebra
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
@@ -50,13 +50,23 @@ BuildRequires:	pkgconfig(glu)
 # on arm because plotter3d assumes qreal=double all over the place
 #Patch0:		kalgebra-4.13.2-opengl_optional.patch
 
+%rename plasma6-kalgebra
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+%if %{with opengl}
+BuildOption:	-DHAVE_OPENGL=1
+%else
+BuildOption:	-DHAVE_OPENGL=0
+%endif
+
 %description
 KAlgebra is a mathematical calculator based content markup MathML
 language. Nowadays it is capable to make simple MathML operations
 (arithmetic and logical) and representate 2D and 3D graphs. It is
 actually not necessary to know MathML to use KAlgebra.
 
-%files -f all.lang
+%files -f %{name}.lang
 %doc COPYING COPYING.LIB COPYING.DOC
 %{_bindir}/calgebra
 %{_bindir}/kalgebra
@@ -68,24 +78,3 @@ actually not necessary to know MathML to use KAlgebra.
 %{_datadir}/metainfo/org.kde.graphsplasmoid.appdata.xml
 %{_iconsdir}/*/*/apps/kalgebra.*
 %{_datadir}/katepart5/syntax/kalgebra.xml
-
-#----------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kalgebra-%{?git:%{gitbranchd}}%{!?git:%{version}}
-
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja \
-%if %{with opengl}
-	-DHAVE_OPENGL=1
-%else
-	-DHAVE_OPENGL=0
-%endif
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang all --all-name --with-html
