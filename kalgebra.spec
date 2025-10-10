@@ -7,7 +7,7 @@
 
 Summary:	MathML-based graph calculator
 Name:		kalgebra
-Version:	25.08.1
+Version:	25.08.2
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
@@ -75,6 +75,5 @@ actually not necessary to know MathML to use KAlgebra.
 %{_datadir}/plasma/plasmoids/org.kde.graphsplasmoid
 %{_datadir}/metainfo/org.kde.kalgebra.appdata.xml
 %{_datadir}/metainfo/org.kde.kalgebramobile.appdata.xml
-%{_datadir}/metainfo/org.kde.graphsplasmoid.appdata.xml
 %{_iconsdir}/*/*/apps/kalgebra.*
 %{_datadir}/katepart5/syntax/kalgebra.xml
