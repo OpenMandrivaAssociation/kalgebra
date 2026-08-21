@@ -7,7 +7,7 @@
 
 Summary:	MathML-based graph calculator
 Name:		kalgebra
-Version:	26.04.3
+Version:	26.08.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+ and LGPLv2+ and GFDL
 Group:		Graphical desktop/KDE
@@ -53,6 +53,7 @@ BuildRequires:	pkgconfig(glu)
 %rename plasma6-kalgebra
 
 BuildSystem:	cmake
+BuildOption:	-DBUILD_PYTHON_BINDINGS:BOOL=OFF
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 %if %{with opengl}
 BuildOption:	-DHAVE_OPENGL=1
